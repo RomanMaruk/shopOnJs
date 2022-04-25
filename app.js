@@ -1,5 +1,6 @@
 let CATALOG = []
 
+spinnerPage.render()
 function render() {
 	const productsStorege = localStorageUtil.getProducts()
 
@@ -12,6 +13,7 @@ fetch('server/catalog.json')
 	.then(response => response.json())
 	.then(data => {
 		CATALOG = data
+		spinnerPage.clearSpinner()
 		render()
 	})
 	.catch(error => console.log(error))
