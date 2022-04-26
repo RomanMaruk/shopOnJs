@@ -1,6 +1,6 @@
 let CATALOG = []
 
-spinnerPage.render()
+// spinnerPage.render()
 function render() {
 	const productsStorege = localStorageUtil.getProducts()
 
